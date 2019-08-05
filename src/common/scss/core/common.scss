@@ -1,0 +1,111 @@
+html {
+  display: block !important;
+  height: 100%;
+  font-family: $fontBase;
+  font-size: 10px;
+  line-height: 1.4;
+  color: $black;
+  background: $white;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  // FLUID FONT
+  // font-size: calc( Fmin + (Fmax - Fmin) * (100vw - Vmin)/(Vmax - Vmin) );
+  @include mq(1024, 1279) {
+    font-size: calc(8.5px + 1.5 * (100vw - 1024px) / 255);
+  }
+
+  @include mq(768, 1023) {
+    font-size: calc(10px + 6 * (100vw - 768px) / 255);
+  }
+
+  @include mq(767) {
+    font-size: calc(10px + 13 * (100vw - 320px) / 447);
+  }
+
+  // popup bugfix in iOS
+  &.isScrollLocked {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+body {
+  position: relative;
+  height: 100%;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+
+  &.isScrollLocked {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}
+
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+}
+
+.main {
+  position: relative;
+  flex: auto;
+}
+
+.container {
+  @include desktop {
+    width:  $containerWidth;
+    margin: 0 auto;
+    padding: $sectionOffsetVertical 0;
+  }
+
+  @include tablet {
+    padding: $sectionOffsetVerticalTablet $sectionOffsetHorizontalTablet;
+  }
+
+  @include mobile {
+    padding: $sectionOffsetVerticalMobile $sectionOffsetHorizontalMobile;
+  }
+
+  &.no-ptb {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+
+
+.visually-hidden {
+  position: absolute!important;
+  width: 1px!important;
+  height: 1px!important;
+  margin: -1px!important;
+  padding: 0!important;
+  clip: rect(0 0 0 0);
+  border: 0!important;
+  overflow: hidden!important;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+.link {
+  transition: $tColor;
+}
+
+[v-cloak] {
+  display: none;
+}

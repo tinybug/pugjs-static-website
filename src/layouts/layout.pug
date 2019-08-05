@@ -1,0 +1,29 @@
+include ./_head.pug
+include ./_components.pug
+include ./../components/header/header.pug
+include ./../components/footer/footer.pug
+
+doctype html
+html
+  head
+    block head
+      +head()
+
+  body
+    //- SVG sprite
+    #symbols.visually-hidden
+      include ../../dist/assets/svg/symbol.svg
+
+    .page.js-page
+      block header
+        +header()
+
+      main.main
+        h1.hello #{$i18n.index.hello}
+        .main__wrapper
+          block content
+
+      block footer
+        +footer()
+
+script(src="assets/js/main.min.js")

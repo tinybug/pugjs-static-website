@@ -1,0 +1,18 @@
+.header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  z-index: 10;
+  transition: background-color .2s ease, border-color .2s ease;
+
+  .isScrolled & {
+    background-color: $white;
+    border-color: rgba(0,0,0,0.5);
+  }
+
+  @include tablet {
+    background: blue;
+  }
+}

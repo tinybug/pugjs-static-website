@@ -1,0 +1,27 @@
+$fontBase: "Roboto", Arial, sans-serif;
+
+$white: #ffffff;
+$black: #262626;
+$red: #ff2731;
+
+$tColor: color 0.2s ease;
+
+$mobile: "screen and (max-width: 767px)";
+$tablet: "screen and (min-width: 768px) and (max-width: 1023px)";
+$mobile-tablet: "screen and (max-width: 1023px)";
+$tablet-desktop: "screen and (min-width: 768px)";
+$desktop: "screen and (min-width: 1024px)";
+
+$colCount: 12;
+$colGapDesktop: 4rem;
+$colGapTablet: 2rem;
+
+$containerWidth: 116rem;
+$containerWidthTablet: 76.8rem;
+
+$sectionOffsetVertical: 8rem;
+$sectionOffsetHorizontal: 3rem;
+$sectionOffsetHorizontalTablet: 4rem;
+$sectionOffsetVerticalTablet: 6rem;
+$sectionOffsetVerticalMobile: 4rem;
+$sectionOffsetHorizontalMobile: 2rem;

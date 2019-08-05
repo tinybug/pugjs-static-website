@@ -1,0 +1,44 @@
+{
+  "name": "pugjs-static-website",
+  "version": "1.0.0",
+  "description": "simple pugjs static website boilerplate",
+  "main": "gulpfile.js",
+  "author": "Jesse Liu",
+  "license": "MIT",
+  "scripts": {
+    "dev": "set NODE_ENV=development&& gulp dev",
+    "build": "set NODE_ENV=production&& gulp build",
+    "api": "cd mockapi && npm run devapi"
+  },
+  "dependencies": {
+    "gulp": "4.0.2",
+    "vue": "2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "axios": "^0.18.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "del": "^4.1.1",
+    "eslint": "^5.16.0",
+    "eslint-loader": "^2.1.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-pug-i18n": "^1.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "node-sass": "^4.12.0",
+    "pug-plain-loader": "^1.0.0",
+    "vue-loader": "^15.7.0",
+    "vue-template-compiler": "^2.6.10",
+    "vue-template-loader": "^1.0.0",
+    "webpack-bundle-analyzer": "^3.3.2",
+    "webpack-stream": "^5.2.1"
+  }
+}
