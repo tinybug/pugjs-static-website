@@ -64,8 +64,9 @@ body {
 }
 
 .container {
+  text-align: center;
   @include desktop {
-    width:  $containerWidth;
+    width: $containerWidth;
     margin: 0 auto;
     padding: $sectionOffsetVertical 0;
   }
@@ -84,17 +85,15 @@ body {
   }
 }
 
-
-
 .visually-hidden {
-  position: absolute!important;
-  width: 1px!important;
-  height: 1px!important;
-  margin: -1px!important;
-  padding: 0!important;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
   clip: rect(0 0 0 0);
-  border: 0!important;
-  overflow: hidden!important;
+  border: 0 !important;
+  overflow: hidden !important;
 }
 
 a {

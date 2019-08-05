@@ -1,3 +1,4 @@
 ---
   index:
     hello: hello, this is a simple static website
+    vue: this is a simple vue component

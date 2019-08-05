@@ -1,5 +1,6 @@
 # Project guide of pugjs-static-website
 Frontend scaffolding tool based on Gulp 4 and Webpack 4 using pugjs, SCSS
+
 Heavily inspired by [gulp-webpack-4-pug-scss-static-website](https://github.com/alcryalcry/gulp-webpack-4-pug-scss-static-website.git)(almost copy from this repo), but more simple and add i18n support.
 
 ## Installation

@@ -1,7 +1,7 @@
-import deviceInfo from './utils/deviceInfo';
 import run from './plugins/run';
 
 import testvue from '../../components/testvue/testvue';
+import deviceinfo from '../../components/deviceinfo/deviceinfo';
 
-deviceInfo();
 run('.js-testvue', testvue);
+run('.info-detail', deviceinfo);

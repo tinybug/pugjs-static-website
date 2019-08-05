@@ -144,12 +144,14 @@ function svg() {
         }
       }
     }))
-    .pipe(gulp.dest('dist/assets/svg'));
+    .pipe(gulp.dest('dist/assets/svg'))
+    .pipe(browserSync.stream());
 }
 
 function copyEnToRoot() {
   return gulp.src(path.join(config.dest, 'en/*'))
-    .pipe(gulp.dest(config.dest));
+    .pipe(gulp.dest(config.dest))
+    .pipe(browserSync.stream());
 }
 
 
@@ -160,7 +162,7 @@ function copyAssetsToLocales() {
     const lang = path.basename(file, '.yml');
     pipeLine = pipeLine.pipe(gulp.dest(path.join('dist', lang, 'assets')));
   });
-  return pipeLine;
+  return pipeLine.pipe(browserSync.stream());
 }
 
 
@@ -188,7 +190,9 @@ function watch() {
       },
     },
   });
-  gulp.watch('./src/**/*.pug', html)
+  gulp.watch('./src/**/*.pug', gulp.series([html, copyEnToRoot, copyAssetsToLocales]))
+  gulp.watch('./src/**/*.vue', gulp.series([html, scripts, copyEnToRoot, copyAssetsToLocales]))
+  gulp.watch('./src/**/*.yml', gulp.series([html, scripts, copyEnToRoot, copyAssetsToLocales]))
   gulp.watch('./src/**/*.scss', styles)
   gulp.watch('./src/**/*.js', scripts)
   gulp.watch('./src/static/img/*', images)

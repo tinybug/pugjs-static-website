@@ -3,6 +3,6 @@ mixin svg(data = {})
     const {
       iconName
     } = data;
-
-  svg(class=(`icon__${iconName}`))
-    use(xlink:href=`#${iconName}`)
+  .svg
+    svg(class=(`icon__${iconName}`))
+      use(xlink:href=`#${iconName}`)

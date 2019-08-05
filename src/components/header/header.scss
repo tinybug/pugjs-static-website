@@ -3,16 +3,9 @@
   position: -webkit-sticky;
   top: 0;
   border-bottom: 1px solid transparent;
-  background: transparent;
+  background: #0f2634;
   z-index: 10;
-  transition: background-color .2s ease, border-color .2s ease;
-
-  .isScrolled & {
-    background-color: $white;
-    border-color: rgba(0,0,0,0.5);
-  }
-
-  @include tablet {
-    background: blue;
-  }
+  color: #f0f0f0;;
+  text-align: center;
+  margin-bottom: 20px;
 }

@@ -4,8 +4,9 @@ mixin testvue(data = {})
     } = data;
 
   .js-testvue
-    ul
-      li(v-for="(item, index) in list") 
-        button(@click="clickaction(index)") {{ index }} - {{ item }}
+    div
+      h3 #{$i18n.index.vue}
     testvue-child
-    
+    ul
+      li(v-for="(item, index) in list")
+        button(@click="clickaction(index)") {{ index }} - {{ item }}

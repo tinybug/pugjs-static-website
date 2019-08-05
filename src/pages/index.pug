@@ -2,16 +2,8 @@ extends ../layouts/layout.pug
 
 block content
   .container
-    a.link.js-btn(href="/page") link to page
     +testvue
 
-    .container
-      div(style="height: 20rem; width: 20rem; color: blue;")
-        +svg({iconName: 'info'})
-      .row
-        .col-6.col-t-6
-          h1(style="height: 20rem; background-color: lightgreen;") col-6 <br> col-t-6
-        .col-2.col-t-2
-          h1(style="height: 20rem; background-color: lightgreen;") col-2 <br> col-t-2
-        .col-4.col-t-4
-          h1(style="height: 20rem; background-color: lightgreen;") col-4 <br> col-t-4
+    .info
+      +svg({iconName: 'info'})
+      +deviceinfo

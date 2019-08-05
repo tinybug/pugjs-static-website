@@ -3,6 +3,11 @@
 @import "core/vars";
 @import "core/mixins";
 @import "core/common";
+@import "../../pages/index.scss";
+@import "../../pages/about.scss";
+@import "core/common";
+@import "../../components/nav/nav.scss";
+@import "../../components/testvue/testvue.scss";
 @import "../../components/svg/svg.scss";
 @import "../../components/header/header.scss";
 @import "../../components/footer/footer.scss";
