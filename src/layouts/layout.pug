@@ -1,13 +1,17 @@
-include ./_head.pug
-include ./_components.pug
-include ./../components/header/header.pug
-include ./../components/footer/footer.pug
+include ../components/header/header.pug
+include ../components/nav/nav.pug
+include ../components/footer/footer.pug
 
 doctype html
 html
   head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    link(rel="shortcut icon" href="assets/img/favicon.ico")
+    link(rel="stylesheet" href="assets/css/main.min.css")
+
     block head
-      +head()
 
   body
     //- SVG sprite

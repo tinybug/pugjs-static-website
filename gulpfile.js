@@ -11,7 +11,6 @@ const gulpif = require('gulp-if');
 const sourcemaps = require('gulp-sourcemaps');
 const imagemin = require('gulp-imagemin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const svgSprite = require('gulp-svg-sprite');
 const path = require('path');
 const fs = require('fs');
@@ -35,7 +34,6 @@ const webpackConfig = {
       analyzerMode: 'static',
       openAnalyzer: config.openAnalyzer,
     }),
-    new VueLoaderPlugin(),
   ],
   module: {
     rules: [
@@ -64,17 +62,8 @@ const webpackConfig = {
             use: ['pug-plain-loader']
           },
         ]
-      },
-      {
-        test: /\.vue$/,
-        use: 'vue-loader',
-      },
+      }
     ]
-  },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    }
   }
 }
 
@@ -191,7 +180,6 @@ function watch() {
     },
   });
   gulp.watch('./src/**/*.pug', gulp.series([html, copyEnToRoot, copyAssetsToLocales]))
-  gulp.watch('./src/**/*.vue', gulp.series([html, scripts, copyEnToRoot, copyAssetsToLocales]))
   gulp.watch('./src/**/*.yml', gulp.series([html, scripts, copyEnToRoot, copyAssetsToLocales]))
   gulp.watch('./src/**/*.scss', styles)
   gulp.watch('./src/**/*.js', scripts)
